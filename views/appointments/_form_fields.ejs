@@ -1,0 +1,52 @@
+<div class="form-row">
+  <div class="form-item">
+    <label>appointment ID</label>
+    <input type="text" name="appID" value="<%= appointment.appID %>">
+  </div>
+
+
+
+  <div class="form-item">
+    <label>Building</label>
+    <select name="building">
+      <% buildings.forEach(building => { %>
+        <% if (building.id === appointment.building) { %>
+          <option selected label="<%= building.name %>" value="<%= building.id %>">
+        <% } else { %>
+          <option label="<%= building.name %>" value="<%= building.id %>">
+        <% } %>
+      <% }) %>
+    </select>
+  </div>
+</div>
+
+
+<div class="form-row">
+  <div class="form-item">
+    <label>Appointment Date</label>
+    <input type="date" name="appdate"
+          value="<%= appointment.appdate == null ? '' : appointment.appdate.toISOString().split('T')[0] %>">
+  </div>
+
+
+
+<div class="form-item">
+  <label>Student</label>
+  <select name="student">
+    <% students.forEach(student => { %>
+      <% if (student.id === appointment.student) { %>
+      <option selected label="<%= student.name %>" value="<%= student.id %>">
+        <% } else { %>
+    <option label="<%= student.name %>" value="<%= student.id %>">
+      <% } %>
+      <% }) %>
+  </select>
+</div>
+</div>
+
+
+  <div class="form-item">
+    <label>Description</label>
+    <textarea name="description"><%= appointment.description %></textarea>
+  </div>
+</div>

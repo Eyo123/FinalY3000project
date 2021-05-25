@@ -1,0 +1,17 @@
+<% appointmentCoverClass = locals.large ? 'appointment-cover-large' : '' %>
+<% appointmentGridClass = locals.large ? 'appointment-grid-large' : '' %>
+
+<div class="appointment-grid <%= appointmentGridClass %>">
+    <% appointments.forEach(appointment => { %>  <div class="appointments-row">
+        <h4><div class="appointments-name"><%= appointment.appID%></div></h4>
+    <div >
+           <div class="appointment-details-btn-row">
+                <a class="btn btn-primary" href="/appointments/<%= appointment.id %>/edit">Edit</a>
+                <%- include('../partials/deleteForm', { url: `/appointments/${appointment.id}` }) %>
+            </div>
+                 </a>
+    <% }) %>
+
+</div>
+</div>
+</div>

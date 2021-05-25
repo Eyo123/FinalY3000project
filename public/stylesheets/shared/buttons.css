@@ -1,0 +1,54 @@
+:root {
+  --color-btn-primary-background: black;
+  --color-btn-primary-background-dark: white;
+  --color-btn-primary-text: white;
+  --color-btn-primary-text-dark: black;
+  --color-btn-border: black;
+  --color-btn-danger-background: black;
+  --color-btn-danger-background-dark: grey;
+
+}
+
+.btn {
+  border: black;
+  border-radius: .5rem;
+  padding: .5rem 2rem;
+  font-size: 0.9rem;
+  font-family: 'inherit';
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.btn-row > * {
+  margin-left: 1rem;
+}
+
+.btn-row > *:first-child {
+  margin-left: 0;
+}
+
+.btn-primary {
+  color: white;
+  background-color: var(--color-btn-primary-background);
+}
+
+.btn-primary:hover {
+  color: var(--color-btn-primary-text-dark);
+  background-color: var(--color-btn-primary-background-dark);
+}
+
+.btn-danger {
+  color: var(--color-btn-danger-text);
+  background-color: var(--color-btn-danger-background);
+}
+
+.btn-danger:hover {
+  color: var(--color-btn-danger-text-dark);
+  background-color: var(--color-btn-danger-background-dark);
+}

@@ -1,0 +1,21 @@
+<h2 class="page-header">Search Room/Appointment</h2>
+<form action="/appointments" method="GET">
+  <div class="form-row">
+    <div class="form-item">
+      <label>appointmentID</label>
+      <input type="text" name="appID" value="<%= searchOptions.appID %>">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-item">
+      <label>(optional) Date when you have created the appointment</label>
+      <input type="date" name="seconddate" value="<%= searchOptions.seconddate %>">
+    </div>
+
+  </div>
+  <div class="form-row form-row-end">
+    <button class="btn btn-primary" type="submit">Search</button>
+  </div>
+</form>
+<br>
+<%- include('../partials/appointmentGrid', { appointments: appointments, large: true }) %>

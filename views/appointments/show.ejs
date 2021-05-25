@@ -1,0 +1,21 @@
+<h2 class="page-header"><%= appointment.appID %></h2>
+<div class="appointment-details">
+  <div>
+
+    <div class="appointment-details-btn-grid">
+      <a class="btn btn-primary" href="/appointments/<%= appointment.id %>/edit">Edit</a>
+      <%- include('../partials/deleteForm', { url: `/appointments/${appointment.id}` }) %>
+      <a class="btn btn-primary appointment-details-building-button" href="/buildings/<%= appointment.building.id %>">View Building</a>
+    </div>
+  </div>
+  <div class="appointment-details-grid">
+    <div class="appointment-details-label">Building:</div>
+    <div><%= appointment.building.name %></div>
+    <div class="appointment-details-label">Student:</div>
+    <div><%= appointment.student.name %></div>
+    <div class="appointment-details-label">Appointment Date:</div>
+    <div><%= appointment.appdate.toDateString() %></div>
+    <div class="appointment-details-label">Description:</div>
+    <div><%= appointment.description %></div>
+  </div>
+</div>
