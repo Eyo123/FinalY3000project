@@ -92,7 +92,7 @@ router.delete('/:id', async (req, res) => {
         if (building == null) {
             res.redirect('/')
         } else {
-            res.redirect(`/buildings/${building.id}`)
+            res.redirect(`/buildings/${building.id}`) 
         }
     }
 })
