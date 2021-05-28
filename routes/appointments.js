@@ -111,7 +111,7 @@ router.delete('/:id', async (req, res) => {
         if (appointment != null) {
             res.render('appointments/show', {
                 appointment: appointment,
-                errorMessage: 'Could not remove appointment'
+                errorMessage: 'Could not remove appointment '
             })
         } else {
             res.redirect('/')
