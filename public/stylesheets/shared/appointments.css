@@ -57,5 +57,5 @@
 
 .appointment-details-building-button {
     grid-area: building;
-    justify-self: stretch;
+    justify-self: stretch; 
 }

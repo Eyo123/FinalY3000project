@@ -12,4 +12,4 @@ router.get('/', async (req, res) => {
   res.render('index', { appointments: appointments })
 })
 
-module.exports = router
+module.exports = router 
