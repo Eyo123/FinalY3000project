@@ -8,3 +8,4 @@ install:
   - npm install chai
   - npm install chai-http
   - npm install express
+  - npm test server.js
