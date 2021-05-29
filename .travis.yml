@@ -5,7 +5,17 @@ node_js:
 cache: npm
 
 install:
-  - npm install -g mocha
-  - npm install chai
-  - npm install chai-http
-  - npm install express
+  - yarn install
+
+
+script:
+  - yarn test
+  - yarn test build
+
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: travis
