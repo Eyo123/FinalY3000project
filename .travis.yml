@@ -2,20 +2,9 @@ language: node_js
 node_js:
   - node
 
-cache: npm
-
+cache:
 install:
-  - yarn install
-
-
-script:
-  - yarn test
-  - yarn test build
-
-
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github-token: $GITHUB_TOKEN
-  on:
-    branch: travis
+  - npm install -g mocha
+  - npm install chai
+  - npm install chai-http
+  - npm install express
