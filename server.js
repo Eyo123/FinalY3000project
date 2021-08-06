@@ -7,7 +7,7 @@ var mongo = require('mongodb').MongoClient;
 var objectId = require('mongodb').ObjectID;
 var assert = require('assert');
 
-var url= 'mongodb+srv://Mop:REAL123456789@cluster0.xucpe.mongodb.net/test?retryWrites=true&w=majority';
+var url= 'mongodb+srv://Mop:REAL123456789@cluster0.xucpe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
